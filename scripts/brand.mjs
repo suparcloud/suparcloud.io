@@ -10,7 +10,13 @@ await fs.writeFile(`${dir}/tokens.json`,JSON.stringify(colors,null,2)+'\n');
 const shapes = ['M 244 290 C 260 123 397 0 552 0 C 680 0 789 78 842 204 C 693 149 484 267 397 448 C 328 590 233 668 142 668 C 46 668 0 612 0 521 C 0 389 119 278 244 290 Z','M 110 748 C 270 783 432 684 508 522 C 562 407 657 294 774 294 C 902 294 1000 398 1000 529 C 1000 699 855 834 686 834 L 330 834 C 243 834 166 800 110 748 Z'];
 const mark=(variant='color')=>shapes.map((d,i)=>`<path fill="${variant==='white'?'#FFFFFF':variant==='ink'?colors.ink:[colors.blue,colors.violet][i]}" d="${d}"/>`).join('');
 const svg=(w,h,body)=>`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}</svg>`;
-const text=(s,size,x,y,color)=>font.getPath(s,x,y,size).toSVG(2).replace('fill="black"',`fill="${color}"`).replace('<path ',`<path fill="${color}" `);
+const text=(s,size,x,y,color)=>{
+ const data=font.getPath(s,x,y,size).commands.map(c=>{
+  const keys={M:['x','y'],L:['x','y'],Q:['x1','y1','x','y'],C:['x1','y1','x2','y2','x','y'],Z:[]}[c.type];
+  return c.type+keys.map(k=>{if(!Number.isFinite(c[k]))throw Error('Invalid font outline');return c[k].toFixed(2);}).join(' ');
+ }).join(' ');
+ return '<path fill="'+color+'" d="'+data+'"/>';
+};
 const sources={};
 for (const variant of ['color','reverse','ink','white']) {
  const fg=variant==='reverse'||variant==='white'?'#FFFFFF':colors.ink;
