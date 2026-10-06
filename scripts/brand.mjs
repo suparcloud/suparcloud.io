@@ -24,8 +24,8 @@ for (const variant of ['color','reverse','ink','white']) {
  const fg=variant==='reverse'||variant==='white'?'#FFFFFF':colors.ink;
  const m=mark(variant==='reverse'?'color':variant);
  sources[`mark-${variant}`]=svg(1000,834,m);
- const word=text('uparcloud',172,232,173,fg,logoFont);
- sources[`horizontal-${variant}`]=svg(1050,220,`<g transform="translate(8 14) scale(.21)">${m}</g>${word}`);
+ const word=text('suparcloud',172,260,173,fg,logoFont);
+ sources[`horizontal-${variant}`]=svg(1170,220,`<g transform="translate(8 14) scale(.21)">${m}</g>${word}`);
  sources[`stacked-${variant}`]=svg(1000,670,`<g transform="translate(260 20) scale(.48)">${m}</g>${text('suparcloud',150,(1000-logoFont.getAdvanceWidth('suparcloud',150))/2,600,fg,logoFont)}`);
 }
 for(const [name,source] of Object.entries(sources)) {

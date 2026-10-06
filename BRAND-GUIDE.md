@@ -1,4 +1,4 @@
-# SuparCloud brand guide — v1.1
+# SuparCloud brand guide — v1.2
 
 ## Purpose and positioning
 Build open-source tools that simplify cloud infrastructure and help small teams bring useful software into the world. Current project: SuparShip, a self-service application delivery platform for Kubernetes teams.
@@ -6,7 +6,7 @@ Build open-source tools that simplify cloud infrastructure and help small teams 
 **Brand promise:** Less friction. More possibility.
 **Supporting line:** Open tools. Your cloud.
 
-Use SuparCloud in prose, SuparShip for the product, and lowercase only in designed wordmarks, domains, and repository names. The compact horizontal logo uses the symbol as the first “s”; never add another “s” before the remaining “uparcloud” letters.
+Use SuparCloud in prose, SuparShip for the product, and lowercase only in designed wordmarks, domains, and repository names. Both horizontal and stacked logos pair the cloud symbol with the complete lowercase “suparcloud” wordmark, including the initial “s”. Keep a visible gap between symbol and lettering. The symbol never replaces a letter; use it alone for avatars and favicons.
 
 ## Logo provenance
 The supplied blue-and-purple cloud screenshots are the visual reference. The cloud curves are reconstructed from those references. The rounded wordmark uses outlined Fredoka SemiBold, selected for soft terminals and curved letterforms. These are not original designer vector files or a pixel-exact trace. The older logo delivery archive contains a different identity and is excluded. Replace these masters with verified designer paths if they become available; preserve the filenames to avoid breaking site references.
