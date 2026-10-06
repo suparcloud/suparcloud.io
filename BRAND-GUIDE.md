@@ -1,4 +1,4 @@
-# SuparCloud brand guide — v1.0
+# SuparCloud brand guide — v1.1
 
 ## Purpose and positioning
 Build open-source tools that simplify cloud infrastructure and help small teams bring useful software into the world. Current project: SuparShip, a self-service application delivery platform for Kubernetes teams.
@@ -9,7 +9,7 @@ Build open-source tools that simplify cloud infrastructure and help small teams 
 Use SuparCloud in prose, SuparShip for the product, and lowercase only in designed wordmarks, domains, and repository names. The compact horizontal logo uses the symbol as the first “s”; never add another “s” before the remaining “uparcloud” letters.
 
 ## Logo provenance
-The supplied blue-and-purple cloud screenshots are the visual reference. The SVG curves and outlined Poppins Bold lettering in this kit are reconstructed, not original designer vector artwork or a pixel-exact trace. The older logo delivery archive contains a different identity and is excluded. Replace these masters with verified designer paths if they become available; preserve the filenames to avoid breaking site references.
+The supplied blue-and-purple cloud screenshots are the visual reference. The cloud curves are reconstructed from those references. The rounded wordmark uses outlined Fredoka SemiBold, selected for soft terminals and curved letterforms. These are not original designer vector files or a pixel-exact trace. The older logo delivery archive contains a different identity and is excluded. Replace these masters with verified designer paths if they become available; preserve the filenames to avoid breaking site references.
 
 ## Color
 | Token | sRGB hex | Role |
@@ -25,7 +25,7 @@ The supplied blue-and-purple cloud screenshots are the visual reference. The SVG
 These values standardize the new kit; they are not authoritative samples from compressed references. Aim for 70% white/pale surfaces, 20% navy/text, 10% accents. White text on Cloud blue and Flow violet passes WCAG AA normal-text contrast; navy and slate on white/Cloud white also pass. Do not use Mist as text or as the sole essential control boundary. Verify new combinations. Never communicate state through color alone. Screen assets are sRGB; proof colors separately for print.
 
 ## Typography and visual style
-Poppins Bold 700: headlines and outlined logo lettering. Self-hosted font and SIL OFL license included. Body: system sans-serif (-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif). Body 16–18px with 1.65 line height; headlines 30–62px with 1.15–1.25 line height. Keep paragraphs around 55–75 characters. Use an 8px spacing rhythm; 8px button corners; 16–20px card corners. Keep generous whitespace, subtle dividers, and minimal effects. Visible focus, semantic links, and reduced-motion support are required.
+Fredoka SemiBold 600: rounded, outlined logo lettering. Poppins Bold 700: headlines. Both fonts and their SIL OFL licenses are included. Body: system sans-serif (-apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif). Body 16–18px with 1.65 line height; headlines 30–62px with 1.15–1.25 line height. Keep paragraphs around 55–75 characters. Use an 8px spacing rhythm; 8px button corners; 16–20px card corners. Keep generous whitespace, subtle dividers, and minimal effects. Visible focus, semantic links, and reduced-motion support are required.
 
 ## Logo usage
 - Horizontal: navigation and wide placements; minimum width 140px.

@@ -64,4 +64,4 @@ Optionally point `www` by CNAME to `suparcloud.github.io`. Preserve unrelated ma
 References: [GitHub custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [GitHub custom-domain configuration](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Licenses
-Poppins is included under its SIL Open Font License in `assets/fonts/OFL.txt`. Brand artwork identifies SuparCloud; no transfer of trademark rights or blanket source-code license is implied.
+Poppins and Fredoka are included under their SIL Open Font Licenses in `assets/fonts/OFL.txt` and `assets/fonts/Fredoka-OFL.txt`. Fredoka SemiBold is the rounded wordmark font; Poppins remains the headline font. Brand artwork identifies SuparCloud; no transfer of trademark rights or blanket source-code license is implied.
