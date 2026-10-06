@@ -1,0 +1,4 @@
+node_modules/
+_site/
+artifacts/
+.DS_Store

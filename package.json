@@ -1,0 +1,20 @@
+{
+  "name": "suparcloud.io",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "brand": "node scripts/brand.mjs && node scripts/guide.mjs",
+    "test": "node scripts/check.mjs",
+    "pack": "node scripts/pack.mjs"
+  },
+  "keywords": [],
+  "description": "SuparCloud static website and brand system",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "opentype.js": "^2.0.0",
+    "playwright": "^1.63.0",
+    "sharp": "^0.35.5"
+  },
+  "private": true
+}
