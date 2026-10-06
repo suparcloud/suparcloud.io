@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import sharp from 'sharp';
+import opentype from 'opentype.js';
+const out=process.argv[2] || 'artifacts/youtube';
+await fs.mkdir(out,{recursive:true});
+const b=await fs.readFile('assets/fonts/Poppins-Bold.ttf');const f=opentype.parse(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));
+const text=(s,size,y,color)=>{const x=(2560-f.getAdvanceWidth(s,size))/2;const d=f.getPath(s,x,y,size).commands.map(c=>c.type+({M:['x','y'],L:['x','y'],Q:['x1','y1','x','y'],C:['x1','y1','x2','y2','x','y'],Z:[]}[c.type]).map(k=>c[k].toFixed(2)).join(' ')).join(' ');return `<path fill="${color}" d="${d}"/>`;};
+const logo=(await fs.readFile('assets/brand/horizontal-reverse.svg','utf8')).replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,'');
+const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440"><rect width="2560" height="1440" fill="#142747"/><circle cx="80" cy="120" r="440" fill="#1A3157"/><circle cx="2530" cy="1450" r="510" fill="#25345A"/><g transform="translate(929 550) scale(.6)">${logo}</g>${text('Less friction. More possibility.',60,782,'#FFFFFF')}${text('Open-source cloud tools · Kubernetes · SuparShip',28,849,'#BFCCE4')}</svg>`;
+await fs.writeFile(out+'/channel-banner-v3.svg',svg);await sharp(Buffer.from(svg)).png().toFile(out+'/channel-banner-v3.png');
+await fs.copyFile('assets/brand/avatar-light-1024.png',out+'/channel-avatar-v3.png');
+await fs.writeFile(out+'/channel-description-v3.txt',`Less friction. More possibility.\n\nSuparCloud builds open-source tools that make cloud infrastructure simpler, so small teams can spend more time building useful software.\n\nOur first project, SuparShip, gives Kubernetes teams a self-service path to deploy applications, create preview environments, and promote releases.\n\nSubscribe for practical demos, engineering lessons, and a look at what we're building:\n• SuparShip and developer self-service\n• Kubernetes, GitOps, Argo CD, and Kargo\n• Preview environments and application delivery\n• Cloud infrastructure for small teams\n\nOpen tools. Your cloud.\n\nExplore SuparCloud: https://suparcloud.io/\nExplore SuparShip: https://suparship.io/\nBuild with us: https://github.com/suparcloud\n`);
+console.log(await sharp(out+'/channel-banner-v3.png').metadata());
